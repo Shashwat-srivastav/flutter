@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_tutorial/Mytheme.dart';
 import 'package:flutter_tutorial/homepage.dart';
 import 'package:flutter_tutorial/login.dart';
 import 'package:flutter_tutorial/route/MyRoutes.dart';
@@ -16,9 +17,10 @@ class MyApp extends StatelessWidget {
     int x = 12;
 
     return MaterialApp(
-        themeMode: ThemeMode.dark,
-        darkTheme: ThemeData(brightness: Brightness.dark),
-        theme: ThemeData(primarySwatch: Colors.blueGrey),
+        theme: MyTheme.Blue(context),
+        // themeMode: ThemeMode.light,
+        // darkTheme: ThemeData(brightness: Brightness.dark),
+        // theme: ThemeData(primarySwatch: Colors.deepPurple),
         initialRoute: MyRoute.loginpage,
         routes: {
           MyRoute.loginpage: (context) => LoginPage(),
