@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
     int x = 12;
 
     return MaterialApp(
-        theme: MyTheme.Blue(context),
+        theme: MyTheme.dark(context),
         // themeMode: ThemeMode.light,
         // darkTheme: ThemeData(brightness: Brightness.dark),
         // theme: ThemeData(primarySwatch: Colors.deepPurple),

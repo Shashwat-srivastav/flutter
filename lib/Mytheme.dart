@@ -32,6 +32,14 @@ class MyTheme {
         // :TextTheme(bodyText1: TextStyle(color: Colors.deepPurple)))
         // textTheme: Theme.of(context).textTheme),
       ));
+  static ThemeData dark(BuildContext context) => ThemeData(
+        brightness: Brightness.dark,
+        buttonColor: Colors.black87,
+        primaryColor: Colors.deepPurple,
+        // canvasColor: Colors.deepPurple
+        // VxBox: Colors.deepPurple
+      );
+
   // primaryTextTheme:
   // TextTheme(bodyText1: TextStyle(color: Colors.deepPurple)));
 }

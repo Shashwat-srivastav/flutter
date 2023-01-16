@@ -1,25 +1,7 @@
 {
  "product" : [
-  {
-        "id": "first dish",
-        "name": "Noodle",
-        "des": "spanish noodle",
-        "price": 35,
-        "color": "blue",
-        "img":
-            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStgkoxBA5VC3pvUqvaexx8JL3hvbRwu6zriw&usqp=CAU"
-  },
-  {
-        "id": "second dish",
-        "name": "Noodle",
-        "des": "Chinese Noodle",
-        "price": 35,
-        "color": "yellow",
-        "img":
-            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIckxlFwKi_h7bf6Xachhqm00OsNjNHK99fA&usqp=CAU"
-  },
-  {
-        "id": "thir dish",
+   {
+        "id": "1",
         "name": "Noodle",
         "des": "Japanese Noodle",
         "price": 35,
@@ -28,7 +10,7 @@
             "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDnVWVdA0t6IpwpOVGzHj-_lBw9cvf-2NO_w&usqp=CAU"
   },
    {
-        "id": "first dsh",
+        "id": "2",
         "name": "Noodle",
         "des": "spanish noodle",
         "price": 35,
@@ -37,7 +19,7 @@
             "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStgkoxBA5VC3pvUqvaexx8JL3hvbRwu6zriw&usqp=CAU"
   },
   {
-        "id": "thirddish",
+        "id": "3",
         "name": "Noodle",
         "des": "Japanese Noodle",
         "price": 35,
@@ -46,7 +28,43 @@
             "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDnVWVdA0t6IpwpOVGzHj-_lBw9cvf-2NO_w&usqp=CAU"
   },
    {
-        "id": "fidish",
+        "id": "4",
+        "name": "Noodle",
+        "des": "spanish noodle",
+        "price": 35,
+        "color": "blue",
+        "img":
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStgkoxBA5VC3pvUqvaexx8JL3hvbRwu6zriw&usqp=CAU"
+  },
+  {
+        "id": "5",
+        "name": "Noodle",
+        "des": "Japanese Noodle",
+        "price": 35,
+        "color": "orange",
+        "img":
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDnVWVdA0t6IpwpOVGzHj-_lBw9cvf-2NO_w&usqp=CAU"
+  },
+   {
+        "id": "6",
+        "name": "Noodle",
+        "des": "spanish noodle",
+        "price": 35,
+        "color": "blue",
+        "img":
+           "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStgkoxBA5VC3pvUqvaexx8JL3hvbRwu6zriw&usqp=CAU"
+  },
+    {
+        "id": "7",
+        "name": "Noodle",
+        "des": "Japanese Noodle",
+        "price": 35,
+        "color": "orange",
+        "img":
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDnVWVdA0t6IpwpOVGzHj-_lBw9cvf-2NO_w&usqp=CAU"
+  },
+   {
+        "id": "8",
         "name": "Noodle",
         "des": "spanish noodle",
         "price": 35,
