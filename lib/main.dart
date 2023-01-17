@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_tutorial/Mytheme.dart';
+import 'package:flutter_tutorial/cart.dart';
 import 'package:flutter_tutorial/homepage.dart';
 import 'package:flutter_tutorial/login.dart';
 import 'package:flutter_tutorial/route/MyRoutes.dart';
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
     int x = 12;
 
     return MaterialApp(
-        theme: MyTheme.dark(context),
+        theme: MyTheme.Blue(context),
         // themeMode: ThemeMode.light,
         // darkTheme: ThemeData(brightness: Brightness.dark),
         // theme: ThemeData(primarySwatch: Colors.deepPurple),
@@ -26,6 +27,7 @@ class MyApp extends StatelessWidget {
           MyRoute.loginpage: (context) => LoginPage(),
           MyRoute.homepage: (context) => homepage(),
           MyRoute.sign_up: (context) => Sign_Up(),
+          MyRoute.cart: (context) => CartPage(),
         });
   }
 }

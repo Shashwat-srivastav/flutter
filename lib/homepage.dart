@@ -5,6 +5,8 @@ import 'dart:convert';
 import "package:flutter/material.dart";
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_tutorial/cart.dart';
+import 'package:flutter_tutorial/route/MyRoutes.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 import 'package:flutter_tutorial/Mydrawer.dart';
@@ -35,12 +37,17 @@ class _homepageState extends State<homepage> {
     setState(() {});
   }
 
+//main body
+
   @override
   Widget build(BuildContext context) {
     // final dum = List.generate(10, ((index) => MyItems.product[0]));
     return Scaffold(
       floatingActionButton: FloatingActionButton(
-          onPressed: () {}, child: Icon(CupertinoIcons.cart)),
+          onPressed: () {
+            Navigator.pushNamed(context, MyRoute.cart);
+          },
+          child: Icon(CupertinoIcons.cart)),
       body: SafeArea(
         child: Container(
           padding: Vx.m32,
@@ -117,6 +124,7 @@ class _homepageState extends State<homepage> {
   }
 }
 
+//building the list of items
 class ListShow extends StatelessWidget {
   const ListShow({
     Key? key,
@@ -134,6 +142,7 @@ class ListShow extends StatelessWidget {
   }
 }
 
+//header of your app
 class TopText extends StatelessWidget {
   const TopText({super.key});
 
@@ -144,6 +153,7 @@ class TopText extends StatelessWidget {
   }
 }
 
+//your product name price and details
 class LayOut extends StatelessWidget {
   final Item it;
   const LayOut({
@@ -192,6 +202,7 @@ class LayOut extends StatelessWidget {
   }
 }
 
+//image
 class Imageset extends StatelessWidget {
   final Item it;
   const Imageset({
@@ -219,6 +230,7 @@ class Imageset extends StatelessWidget {
   }
 }
 
+//detail page
 class MyCart extends StatelessWidget {
   final Item it;
   const MyCart({
@@ -285,7 +297,7 @@ class MyCart extends StatelessWidget {
                                       .text
                                       .xl4
                                       .bold
-                                      .green400
+                                      .green600
                                       .make()
                                       .p20(),
                                   ElevatedButton(
