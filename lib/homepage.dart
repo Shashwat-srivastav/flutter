@@ -6,6 +6,7 @@ import "package:flutter/material.dart";
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_tutorial/cart.dart';
+import 'package:flutter_tutorial/cartData.dart';
 import 'package:flutter_tutorial/route/MyRoutes.dart';
 import 'package:velocity_x/velocity_x.dart';
 
@@ -154,7 +155,7 @@ class TopText extends StatelessWidget {
 }
 
 //your product name price and details
-class LayOut extends StatelessWidget {
+class LayOut extends StatefulWidget {
   final Item it;
   const LayOut({
     Key? key,
@@ -163,27 +164,47 @@ class LayOut extends StatelessWidget {
         super(key: key);
 
   @override
+  State<LayOut> createState() => _LayOutState();
+}
+
+class _LayOutState extends State<LayOut> {
+  bool added = false;
+  @override
   Widget build(BuildContext context) {
     return VxBox(
       child: Row(children: [
-        Hero(tag: Key(it.id), child: Imageset(it: it)),
+        Hero(tag: Key(widget.it.id.toString()), child: Imageset(it: widget.it)),
         Expanded(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              it.name.text.bold.xl.make(),
-              it.des.text.textStyle(context.captionStyle).make(),
+              widget.it.name.text.bold.xl.make(),
+              widget.it.des.text.textStyle(context.captionStyle).make(),
               ButtonBar(
                 alignment: MainAxisAlignment.spaceBetween,
                 buttonPadding: Vx.mH8,
                 children: [
-                  "\$${it.price}".text.bold.xl.make(),
+                  "\$${widget.it.price}".text.bold.xl.make(),
                   ElevatedButton(
-                    onPressed: () {},
-                    child: "Add to cart".text.make(),
+                    onPressed: () {
+                      if (!added) {
+                        added = added.toggle();
+                        final item = MyItems();
+                        final cart = CartModel();
+                        cart.myItems = item;
+                        cart.add(widget.it);
+
+                        setState(() {});
+                      }
+                    },
+                    child: added
+                        ? Icon(CupertinoIcons.checkmark_seal_fill)
+                        : "Add to cart".text.make(),
                     style: ButtonStyle(
-                      shape: MaterialStateProperty.all(StadiumBorder()),
+                      shape: added
+                          ? MaterialStateProperty.all(CircleBorder())
+                          : MaterialStateProperty.all(StadiumBorder()),
                     ),
                   )
                 ],
@@ -275,7 +296,9 @@ class MyCart extends StatelessWidget {
         body: SafeArea(
           child: Column(
             children: [
-              Hero(tag: Key(it.id), child: Image.network(it.img).centered()),
+              Hero(
+                  tag: Key(it.id.toString()),
+                  child: Image.network(it.img).centered()),
               Expanded(
                 child: VxArc(
                     edge: VxEdge.TOP,
